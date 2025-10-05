@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak Mathapati | Software Engineer & Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=WDXL+Lubrifont+TC&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira+Stencil+One&family=WDXL+Lubrifont+TC&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Monoton&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="youtube-loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+        <div class="gradients-container">
+            <div class="gradient gradient-1"></div>
+            <div class="gradient gradient-2"></div>
+            <div class="gradient gradient-3"></div>
+            <div class="gradient gradient-4"></div>
+            <div class="gradient gradient-5"></div>
+        </div>
+        <div class="particles" id="particles"></div>
+        <div class="falling-stars" id="fallingStars"></div>
+        <div class="spotlight spotlight-1"></div>
+        <div class="spotlight spotlight-2"></div>
+        <div class="spotlight spotlight-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-container glass-card" id="mainNav">
+            <a href="#portfolio" class="port">Portfolio</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle fade-in"> Disciplina - Execucao - Foco</p>
+            <h1 class="hero-title-fade-in">My passion is designing intuitive <span class="text-gradient dynamic-color">Engaging experiences from the ground </span></h1>
+            <p class="hero-description fade-in"> Hey! I'm Sarthak Mathapati — an AI Software Engineer & Web Developer turning ideas into sleek, responsive, and meaningful digital experiences.</p>
+            
+            <div class="profile-container fade-in">
+                <div class="profile-glow"></div>
+                <img src="https://scrawny-maroon-wwjdpftgcz.edgeone.app/WhatsApp%20Image%202025-10-05%20at%2000.21.05_0bb32ab9.jpg" alt="Sarthak" class="profile-img morph-shape">
+            </div>
+            
+            <div class="hero-buttons fade-in">
+                <a href="#projects" class="hero-btn btn-3d">
+                    <span> View My Work <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#contact" class="hero-btn btn-3d primary">
+                    <span>Get In Touch <i class="fas fa-envelope"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-transition">
+        <div class="container">
+            <h2 class="section-title nav-link modern-heading">About <span class="text-gradient text-shimmer">Me</span></h2>
+            <div class="about-grid stagger-animation">
+                <div class="grid-item glass-card grid-item-large interactive-card floating-symbols-container">
+                    <h3>I Prioritize Collaboration & Innovation</h3>
+                    <p class="des elegant-text">Hi! I'm Sarthak Sidalingayya Mathapati, a 2nd-year B.Tech student in Computer Science & Artificial Intelligence at Newton School of Technology (in collaboration with Rishihood University).<br/> Born in Sawantwadi (Sindhudurg, Maharashtra) and raised across Kolhapur to Delhi, I've grown up exploring diverse perspectives — something that deeply shapes how I think, learn, and build. I'm an aspiring software engineer and passionate coder, driven by the goal of creating impactful, human-centered tech solutions.<br/>I completed my schooling at Shantiniketan English Primary School, Sawantwadi, and Jawahar Navodaya Vidyalaya, Pokharapur (Solapur), followed by junior college at Nagnath Vidyalaya, Mohol, and IIT-JEE coaching at Aakash BYJU'S.<br/>Curious by nature and disciplined by choice, I'm constantly learning, experimenting, and innovating — always guided by my mantra: #BuildingWithInnovation 🚀.</p>
+                </div>
+                <div class="grid-item glass-card interactive-card floating-symbols-container">
+                    <h3>Hoobies</h3>
+                    <p class="elegant-text">I enjoy playing badminton, traveling to new places, and reading books that broaden my perspective. Exploring new things excites me, and I love taking on challenging tasks that push my limits. Programming is one of my favorite pursuits, allowing me to think creatively and continuously improve my problem-solving skills & Most Of the Time am Travelling</p>
+                </div>
+                <div class="grid-item glass-card interactive-card floating-symbols-container">
+                    <h3>My tech stack</h3>
+                    <p class="elegant-text">I work with a modern and evolving tech stack that supports building efficient, scalable, and visually appealing applications. I enjoy exploring new technologies, adapting to emerging trends, and continuously improving my development approach to create impactful and user-focused digital experiences.</p>
+                    <div class="skills-tags">
+                        <span class="skill-tag">ReactJS</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MySql</span>
+                    </div>
+                </div>
+                <div class="grid-item glass-card interactive-card floating-symbols-container">
+                    <h3>Passionate about development</h3>
+                    <p class="elegant-text">I am passionate about development and love creating meaningful solutions through code. Building and improving projects excites me, whether it's designing user-friendly interfaces or solving complex backend problems. I enjoy learning new technologies, experimenting with ideas, and turning concepts into impactful digital experiences that make a real difference.</p>
+                     <div class="skills-tags">
+                        <span class="skill-tag">Full Stack </span>
+                        <span class="skill-tag">Mern Stack</span>
+                    </div>
+                    
+                </div>
+                <div class="grid-item glass-card interactive-card floating-symbols-container">
+                    <h3>Building With My StartUp </h3>
+                    <p class="elegant-text">I am building my startup to create innovative and impactful solutions. The journey involves turning ideas into real products, overcoming challenges, and collaborating with a dedicated team.<br/> Each day brings opportunities to learn, innovate, and refine our work, as we strive to develop purposeful technology, scale the venture, and make a meaningful difference for users and the industry.</p>
+                    <div class="skills-tags">
+                        <span class="skill-tag">skens.inc </span>
+                        <span class="skill-tag">leaflix.inc</span>
+                    </div>
+                </div>
+                <div class="grid-item glass-card interactive-card floating-symbols-container">
+                    <h3>Let's build something amazing</h3>
+                    <p class="elegant-text">Ready to collaborate and bring your ideas to life with cutting-edge technology and exceptional design.</p>
+                    <a href="#contact" class="hero-btn btn-3d" style="margin-top: 20px;">
+                        Start a Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-transition">
+        <div class="container">
+            <h2 class="section-title nav-link modern-heading">My <span class="text-gradient text-shimmer">Services</span></h2>
+            <div class="services-grid stagger-animation">
+                <div class="service-card glass-card interactive-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p class="elegant-text">Custom websites and web applications built with modern technologies and best practices.</p>
+                </div>
+                <div class="service-card glass-card interactive-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p class="elegant-text">Creating websites that look and function perfectly on all devices and screen sizes.</p>
+                </div>
+                <div class="service-card glass-card interactive-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>UI/UX Design</h3>
+                    <p class="elegant-text">User-centered design solutions that enhance usability and create engaging experiences.</p>
+                </div>
+                <div class="service-card glass-card interactive-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Performance Optimization</h3>
+                    <p class="elegant-text">Improving website speed and performance for better user experience and SEO.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-transition">
+        <div class="container">
+            <h2 class="section-title nav-link modern-heading">A Selection of <span class="text-gradient text-shimmer">Recent Projects</span></h2>
+            
+            <!-- Portfolio Carousel -->
+            <div class="portfolio-carousel glass-card">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform">
+                            <div class="slide-content">
+                                <h3>E-commerce Platform</h3>
+                                <p>Full-featured online store with modern technologies</p>
+                                <a href="#" class="cta-button">View Project</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Task Management App">
+                            <div class="slide-content">
+                                <h3>Task Management App</h3>
+                                <p>Productivity application for team collaboration</p>
+                                <a href="#" class="cta-button">View Project</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Social Media Dashboard">
+                            <div class="slide-content">
+                                <h3>Social Media Dashboard</h3>
+                                <p>Analytics dashboard with interactive data visualization</p>
+                                <a href="#" class="cta-button">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            
+            <div class="projects-grid stagger-animation">
+                <div class="project-card glass-card interactive-card">
+                    <div class="image-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-desc elegant-text">A full-featured online store with product catalog, shopping cart, and secure payment processing. Built with modern technologies for optimal performance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">MySql</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="hero-btn btn-3d">Live</a>
+                            <a href="#" class="hero-btn btn-3d">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card glass-card interactive-card">
+                    <div class="image-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Task Management App" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-desc elegant-text">A productivity application for managing tasks, projects, and team collaboration with real-time updates and intuitive interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySql</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">ReactJS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="hero-btn btn-3d">Live</a>
+                            <a href="#" class="hero-btn btn-3d">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card glass-card interactive-card">
+                    <div class="image-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Social Media Dashboard" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Social Media Dashboard</h3>
+                        <p class="project-desc elegant-text">Analytics dashboard for tracking social media performance across multiple platforms with interactive data visualization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class=" hero-btn btn-3d">Live</a>
+                            <a href="#" class="hero-btn btn-3d">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-transition">
+        <div class="container">
+            <h2 class="section-title nav-link modern-heading">Client <span class="text-gradient text-shimmer">Testimonials</span></h2>
+            <div class="testimonials">
+                <div class="testimonial-slider">
+                    <div class="testimonial-card glass-card interactive-card">
+                        <div class="testimonial-text elegant-text">
+                            Sarthak delivered an exceptional website that exceeded our expectations. His attention to detail and technical expertise made the entire process smooth and efficient.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Client" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Arpita Patil</h4>
+                                <p>CTO, TechSolutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card interactive-card">
+                        <div class="testimonial-text elegant-text">
+                            Working with Sarthak was a game-changer for our business. He transformed our outdated website into a modern, responsive platform that has significantly improved our user engagement.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Client" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Rahul Diwedi</h4>
+                                <p>Marketing Director, Innovate Co.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card interactive-card">
+                        <div class="testimonial-text elegant-text">
+                            Sarthak's ability to understand our vision and translate it into a functional, beautiful website was impressive. His communication throughout the project was excellent.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Client" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Emily Rodriguez</h4>
+                                <p>Founder, Creative Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-transition">
+        <div class="container">
+            <h2 class="section-title nav-link modern-heading">My <span class="text-gradient text-shimmer">Work Experience</span></h2>
+            <div class="experience-grid stagger-animation">
+                <div class="experience-card glass-card interactive-card">
+                    <h3>Senior Frontend Developer</h3>
+                    <p class="company">Skens.Inc</p>
+                    <p class="duration">2025 - Present</p>
+                    <p class="elegant-text">Lead frontend development for multiple client projects, mentor junior developers, and implement responsive web applications using React and TypeScript. Improved application performance by 40% through optimization techniques.</p>
+                </div>
+                
+                <div class="experience-card glass-card interactive-card">
+                    <h3>Full Stack Developer</h3>
+                    <p class="company">Digital Innovations LLC</p>
+                    <p class="duration">4 months</p>
+                    <p class="elegant-text">Developed and maintained web applications using Vue.js, Node.js, and MongoDB. Collaborated with design teams to implement pixel-perfect UI components and improved development workflows.</p>
+                </div>
+                
+                <div class="experience-card glass-card interactive-card">
+                    <h3>Web Developer</h3>
+                    <p class="company">Creative Web Studio</p>
+                    <p class="duration">2023 - 2024</p>
+                    <p class="elegant-text">Built custom websites for small to medium businesses using HTML, CSS, JavaScript, and WordPress. Implemented SEO best practices and responsive design principles across 50+ projects.</p>
+                </div>
+                
+                <div class="experience-card glass-card interactive-card">
+                    <h3>Junior Developer</h3>
+                    <p class="company">StartUp Ventures</p>
+                    <p class="duration">2024 - 2025</p>
+                    <p class="elegant-text">Assisted in developing web applications and maintaining existing codebase. Gained experience in agile development methodologies and version control systems while contributing to team projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-transition">
+        <div class="container">
+            <h2 class="section-title nav-link modern-heading">Get In <span class="text-gradient text-shimmer">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info stagger-animation">
+                    <div class="contact-item glass-card interactive-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:sarthakmathapati4@gmail.com">sarthakmathapati4@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card interactive-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 9356707688</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card interactive-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p><a href="https://maps.app.goo.gl/H1S8FnoX6z1DmMWKA" target="_blank">Newton School Of Technology, Delhi</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card interactive-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Availability</h3>
+                            <p>Monday - Friday: 9AM - 11PM IST</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form glass-card stagger-animation interactive-card" 
+                      style="padding: 30px;" 
+                      action="https://formspree.io/f/mdkwdaey" 
+                      method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder=" " required>
+                        <label class="form-label">Your Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder=" " required>
+                        <label class="form-label">Your Email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-control" placeholder=" ">
+                        <label class="form-label">Subject</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder=" " required></textarea>
+                        <label class="form-label">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" class="hero-btn btn-3d" style="width: 100%;">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i> Sarthak Mathapati
+                    </div>
+                    <p class="elegant-text">Software Engineer & Web Developer creating digital experiences that make a difference. Passionate about building innovative solutions with modern technologies.</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/skens-git-code" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sarthak-mathapati-b2b04430a/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/mathapatism8" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/mathapati.i8/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; All Rights Reserved By Sarthak Mathapati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.visibility = 'hidden';
+            }, 1000);
+        });
+
+        // Enhanced Custom Cursor
+        const customCursor = document.getElementById('customCursor');
+        const cursorFollower = document.getElementById('cursorFollower');
+        
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+        
+        // Enhanced Cursor effects on interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .hero-btn, .skill-tag, .tech-tag, .social-icon');
+        
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                customCursor.classList.add('cursor-active');
+                cursorFollower.classList.add('cursor-follower-active');
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                customCursor.classList.remove('cursor-active');
+                cursorFollower.classList.remove('cursor-follower-active');
+            });
+            
+            el.addEventListener('mousedown', () => {
+                customCursor.classList.add('cursor-click');
+                cursorFollower.classList.add('cursor-follower-click');
+            });
+            
+            el.addEventListener('mouseup', () => {
+                customCursor.classList.remove('cursor-click');
+                cursorFollower.classList.remove('cursor-follower-click');
+            });
+        });
+
+        // Enhanced Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+        
+        // Enhanced Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Generate enhanced floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random properties
+                const size = Math.random() * 4 + 1;
+                const left = Math.random() * 100;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 20;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}vw`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Create enhanced falling stars
+        function createFallingStars() {
+            const starsContainer = document.getElementById('fallingStars');
+            const starCount = 15;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                // Random properties
+                const left = Math.random() * 100;
+                const duration = Math.random() * 5 + 3;
+                const delay = Math.random() * 10;
+                const size = Math.random() * 2 + 1;
+                
+                star.style.left = `${left}vw`;
+                star.style.animationDuration = `${duration}s`;
+                star.style.animationDelay = `${delay}s`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Random color from accent colors
+                const accentColors = [
+                    'var(--accent-1)', 'var(--accent-2)', 'var(--accent-3)', 
+                    'var(--accent-4)', 'var(--accent-5)', 'var(--accent-6)',
+                    'var(--accent-7)', 'var(--accent-8)', 'var(--accent-9)'
+                ];
+                const randomColor = accentColors[Math.floor(Math.random() * accentColors.length)];
+                star.style.background = randomColor;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Create floating symbols for paragraphs
+        function createFloatingSymbols() {
+            const symbolContainers = document.querySelectorAll('.floating-symbols-container');
+            
+            symbolContainers.forEach(container => {
+                const symbolCount = 10;
+                const symbols = ['</>', '{ }', ';', '()', '=>', '[]', '/*', '*/', '//', '==', '!='];
+                
+                for (let i = 0; i < symbolCount; i++) {
+                    const symbol = document.createElement('div');
+                    symbol.className = 'floating-symbol';
+                    
+                    // Random properties
+                    const left = Math.random() * 100;
+                    const top = Math.random() * 100;
+                    const duration = Math.random() * 15 + 10;
+                    const delay = Math.random() * 15;
+                    const size = Math.random() * 0.8 + 0.5;
+                    const symbolIndex = Math.floor(Math.random() * symbols.length);
+                    
+                    symbol.textContent = symbols[symbolIndex];
+                    symbol.style.left = `${left}%`;
+                    symbol.style.top = `${top}%`;
+                    symbol.style.fontSize = `${size}rem`;
+                    symbol.style.animationDuration = `${duration}s`;
+                    symbol.style.animationDelay = `${delay}s`;
+                    
+                    // Random color from accent colors
+                    const accentColors = [
+                        'var(--accent-1)', 'var(--accent-2)', 'var(--accent-3)', 
+                        'var(--accent-4)', 'var(--accent-5)', 'var(--accent-6)',
+                        'var(--accent-7)', 'var(--accent-8)', 'var(--accent-9)'
+                    ];
+                    const randomColor = accentColors[Math.floor(Math.random() * accentColors.length)];
+                    symbol.style.color = randomColor;
+                    
+                    container.appendChild(symbol);
+                }
+            });
+        }
+
+        // Initialize particles, stars and symbols when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            createFallingStars();
+            createFloatingSymbols();
+        });
+        
+        // Enhanced Scroll Animation System
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animation classes based on data attributes
+                        const element = entry.target;
+                        
+                        // Fade in animation
+                        if (element.classList.contains('fade-in')) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }
+                        
+                        // Slide in from left
+                        if (element.classList.contains('slide-left')) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateX(0)';
+                        }
+                        
+                        // Slide in from right
+                        if (element.classList.contains('slide-right')) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateX(0)';
+                        }
+                        
+                        // Scale up animation
+                        if (element.classList.contains('scale-up')) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'scale(1)';
+                        }
+                        
+                        // Rotate in animation
+                        if (element.classList.contains('rotate-in')) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'rotate(0deg)';
+                        }
+                        
+                        // Stagger animation for child elements
+                        if (element.classList.contains('stagger-children')) {
+                            const children = element.children;
+                            Array.from(children).forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.style.opacity = '1';
+                                    child.style.transform = 'translateY(0)';
+                                }, index * 100);
+                            });
+                        }
+                        
+                        // Typewriter effect
+                        if (element.classList.contains('typewriter')) {
+                            const text = element.getAttribute('data-text') || element.textContent;
+                            element.textContent = '';
+                            element.style.opacity = '1';
+                            typeWriter(element, text, 0, 50);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Initialize enhanced animations for elements
+            function initializeAnimations() {
+                // Fade in elements
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+
+                // Slide from left elements
+                const slideLeftElements = document.querySelectorAll('.slide-left');
+                slideLeftElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateX(-50px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+
+                // Slide from right elements
+                const slideRightElements = document.querySelectorAll('.slide-right');
+                slideRightElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateX(50px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+
+                // Scale up elements
+                const scaleUpElements = document.querySelectorAll('.scale-up');
+                scaleUpElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'scale(0.8)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+
+                // Rotate in elements
+                const rotateElements = document.querySelectorAll('.rotate-in');
+                rotateElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'rotate(-10deg)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+
+                // Stagger children elements
+                const staggerParents = document.querySelectorAll('.stagger-children');
+                staggerParents.forEach(parent => {
+                    const children = parent.children;
+                    Array.from(children).forEach(child => {
+                        child.style.opacity = '0';
+                        child.style.transform = 'translateY(20px)';
+                        child.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    });
+                    observer.observe(parent);
+                });
+
+                // Typewriter elements
+                const typewriterElements = document.querySelectorAll('.typewriter');
+                typewriterElements.forEach(el => {
+                    el.style.opacity = '0';
+                    observer.observe(el);
+                });
+            }
+
+            // Typewriter effect function
+            function typeWriter(element, text, i, speed) {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    setTimeout(() => typeWriter(element, text, i + 1, speed), speed);
+                }
+            }
+
+            // Enhanced Parallax scrolling effect
+            function initParallax() {
+                const parallaxElements = document.querySelectorAll('.parallax');
+                
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.5;
+                    
+                    parallaxElements.forEach(element => {
+                        const depth = element.getAttribute('data-depth') || 0.5;
+                        const movement = -(scrolled * depth);
+                        element.style.transform = `translateY(${movement}px)`;
+                    });
+                });
+            }
+
+            // Enhanced Progress bar animation
+            function initProgressBars() {
+                const progressBars = document.querySelectorAll('.progress-bar');
+                
+                const progressObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const progressBar = entry.target;
+                            const width = progressBar.getAttribute('data-width') || '100%';
+                            progressBar.style.width = width;
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                progressBars.forEach(bar => {
+                    bar.style.width = '0%';
+                    bar.style.transition = 'width 1.5s ease-in-out';
+                    progressObserver.observe(bar);
+                });
+            }
+
+            // Enhanced Counter animation
+            function initCounters() {
+                const counters = document.querySelectorAll('.counter');
+                
+                const counterObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const counter = entry.target;
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            const duration = 2000; // 2 seconds
+                            const step = target / (duration / 16); // 60fps
+                            let current = 0;
+                            
+                            const timer = setInterval(() => {
+                                current += step;
+                                if (current >= target) {
+                                    counter.textContent = target + (counter.getAttribute('data-suffix') || '');
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = Math.floor(current) + (counter.getAttribute('data-suffix') || '');
+                                }
+                            }, 16);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                counters.forEach(counter => {
+                    counterObserver.observe(counter);
+                });
+            }
+
+            // Enhanced Scroll Indicator
+            function initScrollIndicator() {
+                const scrollIndicator = document.getElementById('scrollIndicator');
+                
+                window.addEventListener('scroll', () => {
+                    const windowHeight = window.innerHeight;
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+                    
+                    scrollIndicator.style.width = `${scrollPercent}%`;
+                });
+            }
+
+            // Enhanced Back to Top Button
+            function initBackToTop() {
+                const backToTop = document.getElementById('backToTop');
+                
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                });
+                
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Initialize all enhanced animations
+            initializeAnimations();
+            initParallax();
+            initProgressBars();
+            initCounters();
+            initScrollIndicator();
+            initBackToTop();
+
+            // Enhanced Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Enhanced Form submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Enhanced Interactive elements
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const angleX = (y - centerY) / 10;
+                const angleY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-5px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // Add enhanced floating animation to elements
+        document.querySelectorAll('.floating').forEach(element => {
+            element.style.animationDelay = `${Math.random() * 2}s`;
+        });
+
+        // Add enhanced pulse animation to CTA buttons
+        document.querySelectorAll('.cta-button').forEach(btn => {
+            btn.classList.add('pulse-animation');
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+
+        // Enhanced Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuToggle.querySelector('i').classList.add('fa-bars');
+                mobileMenuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>
