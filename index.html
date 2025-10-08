@@ -507,341 +507,412 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Loading Screen
-            // Enhanced Loading with Progress Bar
-        window.addEventListener('load', function() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            const progressBar = document.getElementById('progressBar');
-            const loadingPercentage = document.getElementById('loadingPercentage');
-            
-            let progress = 0;
-            const totalSteps = 100;
-            const stepDuration = 20; // ms per step
-            
-            function updateProgress() {
-                if (progress < 100) {
-                    // Simulate loading progress
-                    progress += Math.random() * 5 + 1;
-                    if (progress > 100) progress = 100;
-                    
-                    progressBar.style.width = `${progress}%`;
-                    loadingPercentage.textContent = `${Math.floor(progress)}%`;
-                    
-                    setTimeout(updateProgress, stepDuration);
-                } else {
-                    // Loading complete
-                    setTimeout(() => {
-                        loadingScreen.style.opacity = '0';
-                        loadingScreen.style.visibility = 'hidden';
-                    }, 500);
-                }
-            }
-            
-            // Start progress animation
-            setTimeout(updateProgress, 10000);
-        });
-
-        // Alternative: Real loading progress (if you have actual assets to load)
-        function simulateRealLoading() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            const progressBar = document.getElementById('progressBar');
-            const loadingPercentage = document.getElementById('loadingPercentage');
-            
-            let loaded = 0;
-            const totalResources = document.images.length + 
-                                document.querySelectorAll('link[rel="stylesheet"]').length;
-            
-            function resourceLoaded() {
-                loaded++;
-                const progress = Math.min((loaded / totalResources) * 100, 100);
+    // Loading Screen - NO CHANGES AS REQUESTED
+    // Enhanced Loading with Progress Bar
+    window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loadingScreen');
+        const progressBar = document.getElementById('progressBar');
+        const loadingPercentage = document.getElementById('loadingPercentage');
+        
+        let progress = 0;
+        const totalSteps = 100;
+        const stepDuration = 20; // ms per step
+        
+        function updateProgress() {
+            if (progress < 100) {
+                // Simulate loading progress
+                progress += Math.random() * 5 + 1;
+                if (progress > 100) progress = 100;
                 
                 progressBar.style.width = `${progress}%`;
                 loadingPercentage.textContent = `${Math.floor(progress)}%`;
                 
-                if (loaded >= totalResources) {
-                    setTimeout(() => {
-                        loadingScreen.style.opacity = '0';
-                        loadingScreen.style.visibility = 'hidden';
-                    }, 5000);
-                }
+                setTimeout(updateProgress, stepDuration);
+            } else {
+                // Loading complete
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    loadingScreen.style.visibility = 'hidden';
+                }, 500);
             }
-            
-            // Track images
-            Array.from(document.images).forEach(img => {
-                if (img.complete) {
-                    resourceLoaded();
-                } else {
-                    img.addEventListener('load', resourceLoaded);
-                    img.addEventListener('error', resourceLoaded);
-                }
-            });
-            
-            // Track stylesheets
-            Array.from(document.querySelectorAll('link[rel="stylesheet"]')).forEach(link => {
-                if (link.sheet) {
-                    resourceLoaded();
-                } else {
-                    link.addEventListener('load', resourceLoaded);
-                    link.addEventListener('error', resourceLoaded);
-                }
-            });
-            
-            // Fallback: hide loader after max time
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                loadingScreen.style.visibility = 'hidden';
-            }, 4000);
         }
-
-
         
+        // Start progress animation
+        setTimeout(updateProgress, 10000);
+    });
 
-        // Generate enhanced floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
+    // Alternative: Real loading progress (if you have actual assets to load)
+    function simulateRealLoading() {
+        const loadingScreen = document.getElementById('loadingScreen');
+        const progressBar = document.getElementById('progressBar');
+        const loadingPercentage = document.getElementById('loadingPercentage');
+        
+        let loaded = 0;
+        const totalResources = document.images.length + 
+                            document.querySelectorAll('link[rel="stylesheet"]').length;
+        
+        function resourceLoaded() {
+            loaded++;
+            const progress = Math.min((loaded / totalResources) * 100, 100);
             
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                // Random properties
-                const size = Math.random() * 4 + 1;
-                const left = Math.random() * 100;
-                const duration = Math.random() * 20 + 10;
-                const delay = Math.random() * 20;
-                
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${left}vw`;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `${delay}s`;
-                
-                particlesContainer.appendChild(particle);
+            progressBar.style.width = `${progress}%`;
+            loadingPercentage.textContent = `${Math.floor(progress)}%`;
+            
+            if (loaded >= totalResources) {
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    loadingScreen.style.visibility = 'hidden';
+                }, 5000);
             }
         }
-
-        // Create enhanced falling stars
-        function createFallingStars() {
-            const starsContainer = document.getElementById('fallingStars');
-            const starCount = 15;
-            
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                
-                // Random properties
-                const left = Math.random() * 100;
-                const duration = Math.random() * 2 + 1.5;
-                const delay = Math.random() * 100;
-                const size = Math.random() * 20 + 10;
-                
-                star.style.left = `${left}vw`;
-                star.style.animationDuration = `${duration}s`;
-                star.style.animationDelay = `${delay}s`;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                
-                // Random color from accent colors
-                const accentColors = [
-                    'var(--accent-1)', 'var(--accent-2)', 'var(--accent-3)', 
-                    'var(--accent-4)', 'var(--accent-5)', 'var(--accent-6)',
-                    'var(--accent-7)', 'var(--accent-8)', 'var(--accent-9)'
-                ];
-                const randomColor = accentColors[Math.floor(Math.random() * accentColors.length)];
-                star.style.background = randomColor;
-                
-                starsContainer.appendChild(star);
+        
+        // Track images
+        Array.from(document.images).forEach(img => {
+            if (img.complete) {
+                resourceLoaded();
+            } else {
+                img.addEventListener('load', resourceLoaded);
+                img.addEventListener('error', resourceLoaded);
             }
-        }
-
-        // Initialize particles and stars when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
-            createFallingStars();
         });
-
-        // Enhanced Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
         
-        // Check for saved theme preference or default to light
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-theme');
+        // Track stylesheets
+        Array.from(document.querySelectorAll('link[rel="stylesheet"]')).forEach(link => {
+            if (link.sheet) {
+                resourceLoaded();
+            } else {
+                link.addEventListener('load', resourceLoaded);
+                link.addEventListener('error', resourceLoaded);
+            }
+        });
+        
+        // Fallback: hide loader after max time
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+        }, 4000);
+    }
+
+    // OPTIMIZED: Generate enhanced floating particles with batch operations
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+        
+        // Use DocumentFragment for better performance
+        const fragment = document.createDocumentFragment();
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Random properties with optimized values
+            const size = Math.random() * 4 + 1;
+            const left = Math.random() * 100;
+            const duration = Math.random() * 15 + 8; // Faster animation
+            const delay = Math.random() * 15;
+            
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${left}vw`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            
+            fragment.appendChild(particle);
+        }
+        
+        particlesContainer.appendChild(fragment);
+    }
+
+    // OPTIMIZED: Create enhanced falling stars - FAST and IMMEDIATE
+    function createFallingStars() {
+        const starsContainer = document.getElementById('fallingStars');
+        const starCount = 20; // Increased count for more stars
+        
+        // Use DocumentFragment for better performance
+        const fragment = document.createDocumentFragment();
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // OPTIMIZED: Faster falling and immediate start
+            const left = Math.random() * 100;
+            const duration = Math.random() * 1 + 0.8; // Much faster falling (0.8-1.8s)
+            const delay = Math.random() * 2; // Minimal delay for immediate start
+            const size = Math.random() * 15 + 8; // Slightly smaller for better performance
+            
+            star.style.left = `${left}vw`;
+            star.style.animationDuration = `${duration}s`;
+            star.style.animationDelay = `${delay}s`;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random color from accent colors
+            const accentColors = [
+                'var(--accent-1)', 'var(--accent-2)', 'var(--accent-3)', 
+                'var(--accent-4)', 'var(--accent-5)', 'var(--accent-6)',
+                'var(--accent-7)', 'var(--accent-8)', 'var(--accent-9)'
+            ];
+            const randomColor = accentColors[Math.floor(Math.random() * accentColors.length)];
+            star.style.background = randomColor;
+            
+            fragment.appendChild(star);
+        }
+        
+        starsContainer.appendChild(fragment);
+    }
+
+    // NEW: Optimized background color animation
+    function initBackgroundAnimation() {
+        const body = document.body;
+        let hue = 0;
+        
+        function animateBackground() {
+            hue = (hue + 0.5) % 360;
+            body.style.setProperty('--primary-hue', hue);
+            requestAnimationFrame(animateBackground);
+        }
+        
+        // Start background animation
+        animateBackground();
+    }
+
+    // NEW: Device optimization and performance enhancements
+    function optimizeForDevices() {
+        // Detect touch device
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        
+        if (isTouchDevice) {
+            // Optimize for touch devices
+            document.body.classList.add('touch-device');
+            
+            // Reduce animation intensity for mobile
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.style.animationDuration = '1.5s'; // Faster on mobile
+            });
+        } else {
+            document.body.classList.add('desktop-device');
+        }
+        
+        // Reduce motion for users who prefer it
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.body.classList.add('reduce-motion');
+            
+            // Disable intensive animations
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.style.animation = 'none';
+            });
+        }
+    }
+
+    // OPTIMIZED: Initialize all effects when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        createParticles();
+        createFallingStars(); // Stars start immediately and fall fast
+        initBackgroundAnimation(); // Fast background colors
+        optimizeForDevices(); // Device optimization
+    });
+
+    // Enhanced Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
         }
+    });
+    
+    // OPTIMIZED: Header scroll effect with throttling
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
         
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            
-            if (document.body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
-        
-        // Enhanced Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Enhanced Scroll Animation System
-        document.addEventListener('DOMContentLoaded', function() {
-            // Enhanced Intersection Observer for scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        // Throttle scroll events for better performance
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                scrollTimeout = null;
+            }, 10);
+        }
+    });
+    
+    // Enhanced Scroll Animation System
+    document.addEventListener('DOMContentLoaded', function() {
+        // Enhanced Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Add animation classes based on data attributes
-                        const element = entry.target;
-                        
-                        // Fade in animation
-                        if (element.classList.contains('fade-in')) {
-                            element.style.opacity = '1';
-                            element.style.transform = 'translateY(0)';
-                        }
-                        
-                        // Stagger animation for child elements
-                        if (element.classList.contains('stagger-children')) {
-                            const children = element.children;
-                            Array.from(children).forEach((child, index) => {
-                                setTimeout(() => {
-                                    child.style.opacity = '1';
-                                    child.style.transform = 'translateY(0)';
-                                }, index * 100);
-                            });
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            // Initialize enhanced animations for elements
-            function initializeAnimations() {
-                // Fade in elements
-                const fadeElements = document.querySelectorAll('.fade-in');
-                fadeElements.forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(30px)';
-                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    observer.observe(el);
-                });
-
-                // Stagger children elements
-                const staggerParents = document.querySelectorAll('.stagger-children');
-                staggerParents.forEach(parent => {
-                    const children = parent.children;
-                    Array.from(children).forEach(child => {
-                        child.style.opacity = '0';
-                        child.style.transform = 'translateY(20px)';
-                        child.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                    });
-                    observer.observe(parent);
-                });
-            }
-
-            // Enhanced Scroll Indicator
-            function initScrollIndicator() {
-                const scrollIndicator = document.getElementById('scrollIndicator');
-                
-                window.addEventListener('scroll', () => {
-                    const windowHeight = window.innerHeight;
-                    const documentHeight = document.documentElement.scrollHeight;
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add animation classes based on data attributes
+                    const element = entry.target;
                     
-                    scrollIndicator.style.width = `${scrollPercent}%`;
-                });
-            }
-
-            // Enhanced Back to Top Button
-            function initBackToTop() {
-                const backToTop = document.getElementById('backToTop');
-                
-                window.addEventListener('scroll', () => {
-                    if (window.pageYOffset > 300) {
-                        backToTop.classList.add('visible');
-                    } else {
-                        backToTop.classList.remove('visible');
+                    // Fade in animation
+                    if (element.classList.contains('fade-in')) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
                     }
-                });
-                
-                backToTop.addEventListener('click', () => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            }
-
-            // Initialize all enhanced animations
-            initializeAnimations();
-            initScrollIndicator();
-            initBackToTop();
-
-            // Enhanced Smooth scroll for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                    
+                    // Stagger animation for child elements
+                    if (element.classList.contains('stagger-children')) {
+                        const children = element.children;
+                        Array.from(children).forEach((child, index) => {
+                            setTimeout(() => {
+                                child.style.opacity = '1';
+                                child.style.transform = 'translateY(0)';
+                            }, index * 100);
                         });
                     }
-                });
+                }
             });
-        });
+        }, observerOptions);
 
-        // Enhanced Form submission
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
+        // Initialize enhanced animations for elements
+        function initializeAnimations() {
+            // Fade in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Stagger children elements
+            const staggerParents = document.querySelectorAll('.stagger-children');
+            staggerParents.forEach(parent => {
+                const children = parent.children;
+                Array.from(children).forEach(child => {
+                    child.style.opacity = '0';
+                    child.style.transform = 'translateY(20px)';
+                    child.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                });
+                observer.observe(parent);
             });
         }
 
-        // Enhanced Interactive elements
-        document.querySelectorAll('.interactive-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const angleX = (y - centerY) / 10;
-                const angleY = (centerX - x) / 10;
-                
-                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-5px)`;
+        // OPTIMIZED: Scroll Indicator with throttling
+        function initScrollIndicator() {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            let indicatorTimeout;
+            
+            window.addEventListener('scroll', () => {
+                // Throttle scroll events
+                if (!indicatorTimeout) {
+                    indicatorTimeout = setTimeout(() => {
+                        const windowHeight = window.innerHeight;
+                        const documentHeight = document.documentElement.scrollHeight;
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+                        
+                        scrollIndicator.style.width = `${scrollPercent}%`;
+                        indicatorTimeout = null;
+                    }, 10);
+                }
+            });
+        }
+
+        // Enhanced Back to Top Button
+        function initBackToTop() {
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
             });
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Initialize all enhanced animations
+        initializeAnimations();
+        initScrollIndicator();
+        initBackToTop();
+
+        // Enhanced Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
+    });
 
-        // Initialize Swiper
-        const swiper = new Swiper('.swiper', {
+    // Enhanced Form submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    }
+
+    // Enhanced Interactive elements
+    document.querySelectorAll('.interactive-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const angleX = (y - centerY) / 10;
+            const angleY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-5px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+
+    // OPTIMIZED: Initialize Swiper with error handling
+    let swiper;
+    try {
+        swiper = new Swiper('.swiper', {
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
@@ -860,11 +931,15 @@
                 crossFade: true
             },
         });
+    } catch (error) {
+        console.log('Swiper not available');
+    }
 
-        // Enhanced Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mainNav = document.getElementById('mainNav');
-        
+    // Enhanced Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuToggle && mainNav) {
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
@@ -885,8 +960,11 @@
             link.addEventListener('click', () => {
                 mainNav.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
-                mobileMenuToggle.querySelector('i').classList.remove('fa-times');
-                mobileMenuToggle.querySelector('i').classList.add('fa-bars');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             });
         });
 
@@ -897,10 +975,15 @@
                 !mobileMenuToggle.contains(e.target)) {
                 mainNav.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
-                mobileMenuToggle.querySelector('i').classList.remove('fa-times');
-                mobileMenuToggle.querySelector('i').classList.add('fa-bars');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
-    </script>
+    }
+</script>
+
 </body>
 </html>
