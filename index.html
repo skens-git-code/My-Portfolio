@@ -638,8 +638,8 @@
             // OPTIMIZED: Faster falling and immediate start
             const left = Math.random() * 100;
             const duration = Math.random() * 1 + 0.8; // Much faster falling (0.8-1.8s)
-            const delay = Math.random() * 2; // Minimal delay for immediate start
-            const size = Math.random() * 15 + 8; // Slightly smaller for better performance
+            const delay = Math.random() * 1; // Minimal delay for immediate start
+            const size = Math.random() * 4 + 4; // Slightly smaller for better performance
             
             star.style.left = `${left}vw`;
             star.style.animationDuration = `${duration}s`;
